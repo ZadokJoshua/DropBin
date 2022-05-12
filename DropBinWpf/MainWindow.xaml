@@ -28,12 +28,14 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+                
                 <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="20 0 0 0">
                     <TextBlock Text="DropBin"
                                FontSize="50"
                                FontFamily="Lato"
                                FontWeight="Black"
                                Foreground="#EE6C4D"/>
+                    
                     <TextBlock Text="Let's help you take care of the redundant folders in your VS project."
                                FontSize="16"
                                FontFamily="Lato"
@@ -44,7 +46,9 @@
 
                 <!--Second Column upper section-->
                 <Image Grid.Column="1" Source="\Images\bin.png" Width="140" Height="140" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                
             </Grid>
+            
         </Border>
 
         <!--Mid Section-->
