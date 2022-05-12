@@ -1,0 +1,51 @@
+﻿<Window x:Class="DropBinWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DropBinWpf"
+        mc:Ignorable="d"
+        Title="DropBin" Height="650" Width="650"
+        WindowStartupLocation="CenterScreen"
+        Background="#293241"
+        ResizeMode="NoResize"
+        >
+
+    <!--Main Window-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Top Section-->
+        <Border Padding="30">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="20 0 0 0">
+                    <TextBlock Text="DropBin"
+                               FontSize="50"
+                               FontFamily="Lato"
+                               FontWeight="Bold"
+                               Foreground="#EE6C4D"/>
+                    <TextBlock Text="Let's help you take care of your redundant folders in your VS project."
+                               FontSize="16"
+                               FontFamily="Lato"
+                               FontWeight="Light"
+                               Foreground="#EE6C4D"
+                               TextWrapping="Wrap"/>
+                </StackPanel>
+                    <Image Grid.Column="1" Source="\Images\bin.png" Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+
+        <!--Lower Section-->
+        <Border Grid.Row="1">
+            
+        </Border>
+    </Grid>
+</Window>
