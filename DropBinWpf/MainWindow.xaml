@@ -20,6 +20,7 @@
 
         <!--Top Section-->
         <Border Padding="30">
+            
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -38,7 +39,7 @@
                                Foreground="#EE6C4D"
                                TextWrapping="Wrap"/>
                 </StackPanel>
-                    <Image Grid.Column="1" Source="\Images\bin.png" Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Image Grid.Column="1" Source="\Images\bin.png" Width="120" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Grid>
         </Border>
 
