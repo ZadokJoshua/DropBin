@@ -9,10 +9,14 @@
 
   <ItemGroup>
     <None Remove="Images\bin.png" />
+    <None Remove="Images\FileBox.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\bin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\FileBox.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

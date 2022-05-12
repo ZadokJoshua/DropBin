@@ -15,13 +15,15 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="200"/>
+            <RowDefinition Height=".03*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--Top Section-->
         <Border Padding="30">
-            
+
             <Grid>
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -30,23 +32,28 @@
                     <TextBlock Text="DropBin"
                                FontSize="50"
                                FontFamily="Lato"
-                               FontWeight="Bold"
+                               FontWeight="Black"
                                Foreground="#EE6C4D"/>
                     <TextBlock Text="Let's help you take care of your redundant folders in your VS project."
                                FontSize="16"
                                FontFamily="Lato"
-                               FontWeight="Light"
+                               FontWeight="Regular"
                                Foreground="#EE6C4D"
                                TextWrapping="Wrap"/>
                 </StackPanel>
-                    <Image Grid.Column="1" Source="\Images\bin.png" Width="120" Height="120" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                <!--Second Column upper section-->
+                <Image Grid.Column="1" Source="\Images\bin.png" Width="140" Height="140" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Grid>
         </Border>
 
+        <!--Mid Section-->
+        <Border Grid.Row="1" Background="#EE6C4D" Margin="60 4"/>
+
 
         <!--Lower Section-->
-        <Border Grid.Row="1">
-            
+        <Border Grid.Row="2">
+
         </Border>
     </Grid>
 </Window>
