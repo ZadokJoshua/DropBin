@@ -35,7 +35,9 @@
                                FontFamily="Lato"
                                FontWeight="Black"
                                Foreground="#EE6C4D"/>
-                    
+
+                    <Label/>
+
                     <TextBlock Text="Let's help you take care of the redundant folders in your VS project."
                                FontSize="16"
                                FontFamily="Lato"
