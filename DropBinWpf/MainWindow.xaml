@@ -34,11 +34,11 @@
                                FontFamily="Lato"
                                FontWeight="Black"
                                Foreground="#EE6C4D"/>
-                    <TextBlock Text="Let's help you take care of your redundant folders in your VS project."
+                    <TextBlock Text="Let's help you take care of the redundant folders in your VS project."
                                FontSize="16"
                                FontFamily="Lato"
                                FontWeight="Regular"
-                               Foreground="#EE6C4D"
+                               Foreground="#E0FBFC"
                                TextWrapping="Wrap"/>
                 </StackPanel>
 
