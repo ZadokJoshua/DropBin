@@ -10,6 +10,21 @@
         Background="#293241"
         ResizeMode="NoResize"
         >
+    <Window.Resources>
+        <!--Form TextBlock-->
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#E0FBFC"/>
+            <Setter Property="FontFamily" Value="Lato"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+        </Style>
+
+        <!--Form TextBox-->
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Width" Value="500"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+    </Window.Resources>
 
     <!--Main Window-->
     <Grid>
@@ -56,10 +71,24 @@
         <!--Mid Section-->
         <Border Grid.Row="1" Background="#EE6C4D" Margin="60 4"/>
 
-
         <!--Lower Section-->
         <Border Grid.Row="2">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 30 0 0">
+                <StackPanel>
+                    <TextBlock Text="Path" Style="{StaticResource TextBlockStyle}"/>
+                    <TextBox Style="{StaticResource TextBoxStyle}"/>
+                    
+                    <Label/>
 
+                    <TextBlock Text="Email" Style="{StaticResource TextBlockStyle}"/>
+                    <TextBox Style="{StaticResource TextBoxStyle}"/>
+
+                    <Label/>
+
+                    <Button Width="100" Height="30"/>
+                </StackPanel>
+            </Grid>
         </Border>
+
     </Grid>
 </Window>
