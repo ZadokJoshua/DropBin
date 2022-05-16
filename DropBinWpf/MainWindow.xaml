@@ -5,24 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DropBinWpf"
         mc:Ignorable="d"
-        Title="DropBin" Height="650" Width="650"
+        Title="DropBin" Height="500" Width="650"
         WindowStartupLocation="CenterScreen"
         Background="#293241"
         ResizeMode="NoResize"
         >
+    
     <Window.Resources>
         <!--Form TextBlock-->
         <Style x:Key="TextBlockStyle" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="#E0FBFC"/>
+            <Setter Property="Foreground" Value="Wheat"/>
             <Setter Property="FontFamily" Value="Lato"/>
-            <Setter Property="FontSize" Value="17"/>
-            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Regular"/>
+            <Setter Property="Margin" Value="0 0 0 1"/>
         </Style>
 
         <!--Form TextBox-->
         <Style x:Key="TextBoxStyle" TargetType="TextBox">
-            <Setter Property="Width" Value="500"/>
-            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="510"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Style.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="2"/>
+                </Style>
+            </Style.Resources>
         </Style>
     </Window.Resources>
 
@@ -57,7 +66,7 @@
                                FontSize="16"
                                FontFamily="Lato"
                                FontWeight="Regular"
-                               Foreground="#E0FBFC"
+                               Foreground="Wheat"
                                TextWrapping="Wrap"/>
                 </StackPanel>
 
@@ -69,18 +78,18 @@
         </Border>
 
         <!--Mid Section-->
-        <Border Grid.Row="1" Background="#EE6C4D" Margin="60 4"/>
+        <Border Grid.Row="1" Background="#EE6C4D" />
 
         <!--Lower Section-->
         <Border Grid.Row="2">
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 30 0 0">
                 <StackPanel>
-                    <TextBlock Text="Path" Style="{StaticResource TextBlockStyle}"/>
+                    <TextBlock Text="Path:" Style="{StaticResource TextBlockStyle}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}"/>
                     
                     <Label/>
 
-                    <TextBlock Text="Email" Style="{StaticResource TextBlockStyle}"/>
+                    <TextBlock Text="Email:" Style="{StaticResource TextBlockStyle}"/>
                     <TextBox Style="{StaticResource TextBoxStyle}"/>
 
                     <Label/>
