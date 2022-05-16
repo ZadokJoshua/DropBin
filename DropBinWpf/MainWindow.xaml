@@ -8,8 +8,7 @@
         Title="DropBin" Height="500" Width="650"
         WindowStartupLocation="CenterScreen"
         Background="#293241"
-        ResizeMode="NoResize"
-        >
+        ResizeMode="NoResize">
     
     <Window.Resources>
         <!--Form TextBlock-->
@@ -18,7 +17,7 @@
             <Setter Property="FontFamily" Value="Lato"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="Regular"/>
-            <Setter Property="Margin" Value="0 0 0 1"/>
+            <Setter Property="Margin" Value="0 10 0 3"/>
         </Style>
 
         <!--Form TextBox-->
@@ -33,7 +32,18 @@
                 </Style>
             </Style.Resources>
         </Style>
+        
+        <!--Buttons Style-->
+        <Style x:Key="form_buttons" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Style.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="2"/>
+                </Style>
+            </Style.Resources>
+        </Style>
     </Window.Resources>
+    
 
     <!--Main Window-->
     <Grid>
@@ -85,16 +95,35 @@
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 30 0 0">
                 <StackPanel>
                     <TextBlock Text="Path:" Style="{StaticResource TextBlockStyle}"/>
-                    <TextBox Style="{StaticResource TextBoxStyle}"/>
-                    
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBox Style="{StaticResource TextBoxStyle}"/>
+                        <Button Width="50" Height="20" Style="{StaticResource form_buttons}"
+                            HorizontalAlignment="Right" 
+                            Margin="0 2" 
+                            Content="Browse"
+                            FontSize="10"
+                            FontWeight="Bold"
+                            Grid.Column="1"
+                            Background="Wheat"
+                            Foreground="#EE6C4D"/>
+                        <TextBlock Text="Email:" Style="{StaticResource TextBlockStyle}" Grid.Row="1" />
+                        <TextBox Style="{StaticResource TextBoxStyle}" Grid.Row="2" Grid.ColumnSpan="2" Width="570"/>
+                    </Grid>
                     <Label/>
 
-                    <TextBlock Text="Email:" Style="{StaticResource TextBlockStyle}"/>
-                    <TextBox Style="{StaticResource TextBoxStyle}"/>
 
                     <Label/>
 
-                    <Button Width="100" Height="30"/>
+                    <Button Width="100" Height="30" />
                 </StackPanel>
             </Grid>
         </Border>
