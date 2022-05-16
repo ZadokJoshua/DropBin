@@ -33,6 +33,11 @@
             </Style.Resources>
         </Style>
         
+        <!--Check Box-->
+        <Style x:Key="CheckBoxStyle" TargetType="CheckBox">
+            <Setter Property="Foreground" Value="Wheat"/>
+        </Style>
+        
         <!--Buttons Style-->
         <Style x:Key="form_buttons" TargetType="Button">
             <Setter Property="BorderBrush" Value="Gray"/>
@@ -94,6 +99,14 @@
         <Border Grid.Row="2">
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 30 0 0">
                 <StackPanel>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox Content="Exclude Bin Folder" Style="{StaticResource CheckBoxStyle}" />
+                        <CheckBox Content="Exclude Obj Folder" Grid.Column="1" Style="{StaticResource CheckBoxStyle}" />
+                    </Grid>
                     <TextBlock Text="Path:" Style="{StaticResource TextBlockStyle}"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -118,8 +131,6 @@
                         <TextBlock Text="Email:" Style="{StaticResource TextBlockStyle}" Grid.Row="1" />
                         <TextBox Style="{StaticResource TextBoxStyle}" Grid.Row="2" Grid.ColumnSpan="2" Width="570"/>
                     </Grid>
-                    <Label/>
-
 
                     <Label/>
 
