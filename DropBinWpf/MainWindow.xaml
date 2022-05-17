@@ -145,6 +145,10 @@
                                 Content="Zip Project" 
                                 Style="{StaticResource form_buttons}"
                                 HorizontalAlignment="Left"/>
+                        <Button Width="100" Height="30" 
+                                Content="Check History" 
+                                Style="{StaticResource form_buttons}"
+                                Margin="-160 0 0 0"/>
                     </Grid>
                     
                 </StackPanel>
