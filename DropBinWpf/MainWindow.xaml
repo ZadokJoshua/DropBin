@@ -43,7 +43,6 @@
         <Style x:Key="form_buttons" TargetType="Button">
             <Setter Property="Background" Value="Wheat"/>
             <Setter Property="Foreground" Value="#EE6C4D"/>
-            <Setter Property="BorderBrush" Value="Gray"/>
             <Setter Property="FontFamily" Value="Lato"/>
             <Setter Property="FontWeight" Value="DemiBold"/>
             <Setter Property="FontSize" Value="12"/>
@@ -69,10 +68,44 @@
             
             <Style.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="2"/>
+                    <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Style.Resources>
         </Style>
+
+        <!--Reset Button Style-->
+        <Style x:Key="reset_button" TargetType="Button">
+            <Setter Property="Background" Value="Wheat"/>
+            <Setter Property="Foreground" Value="#EE6C4D"/>
+            <Setter Property="FontFamily" Value="Lato"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="FontSize" Value="12"/>
+
+            <!--Mouse Hover Feature: I changed the template of the button and 
+            bind the background color of the button with the background 
+            color of the border-->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+
+            <Style.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+        
     </Window.Resources>
     
 
@@ -130,9 +163,14 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+                        
+                        <!--CheckBoxes-->
                         <CheckBox Content="Exclude Bin Folder" Style="{StaticResource CheckBoxStyle}" />
                         <CheckBox Content="Exclude Obj Folder" Grid.Column="1" Style="{StaticResource CheckBoxStyle}" />
+                        
+
                     </Grid>
+                    
                     <TextBlock Text="Path:" Style="{StaticResource TextBlockStyle}"/>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -169,6 +207,20 @@
                                 Content="Check History" 
                                 Style="{StaticResource form_buttons}"
                                 Margin="-160 0 0 0"/>
+                        
+                        <!--Reset Button-->
+                        <Button HorizontalAlignment="Right" Grid.Column="1"  Width="100" Style="{StaticResource reset_button}">
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="/images/circular.png" Width="15"  Height="15" Grid.Column="0"/>
+                                <TextBlock Text="Reset" Grid.Column="1" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                            </Grid>
+                        </Button>
                     </Grid>
                     
                 </StackPanel>

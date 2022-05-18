@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <None Remove="Images\bin.png" />
-    <None Remove="Images\FileBox.png" />
+    <None Remove="Images\circular.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,7 +21,7 @@
     <Resource Include="Images\bin.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\FileBox.png">
+    <Resource Include="Images\circular.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
