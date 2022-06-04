@@ -192,7 +192,7 @@
                             FontWeight="Bold"
                             Grid.Column="1"
                             Background="#EE6C4D"/>
-                        <TextBlock Text="New File Name:" Style="{StaticResource TextBlockStyle}" Grid.Row="1" />
+                        <TextBlock Text="Rename:" Style="{StaticResource TextBlockStyle}" Grid.Row="1" />
                         <TextBox Style="{StaticResource TextBoxStyle}" Grid.Row="2" Grid.ColumnSpan="2" Width="570"/>
                     </Grid>
 

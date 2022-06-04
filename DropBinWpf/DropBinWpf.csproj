@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <None Remove="Images\bin.png" />
-    <None Remove="Images\circular.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,9 +20,10 @@
     <Resource Include="Images\bin.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\circular.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Actions\" />
   </ItemGroup>
 
 </Project>
