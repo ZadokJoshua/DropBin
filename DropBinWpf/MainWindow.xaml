@@ -127,7 +127,9 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 
-                <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="20 0 0 0">
+                <StackPanel Grid.Column="0" 
+                            VerticalAlignment="Center" 
+                            Margin="20 0 0 0">
                     <TextBlock Text="DropBin"
                                FontSize="50"
                                FontFamily="Lato"
@@ -136,7 +138,7 @@
 
                     <Label/>
 
-                    <TextBlock Text="Let's help you take care of the redundant folders in your VS project."
+                    <TextBlock Text="Zip up your Visual Studio Project directory without redundant folders (Bin/Obj) in that directory."
                                FontSize="16"
                                FontFamily="Lato"
                                FontWeight="Regular"
@@ -145,14 +147,19 @@
                 </StackPanel>
 
                 <!--Second Column upper section-->
-                <Image Grid.Column="1" Source="\Images\bin.png" Width="140" Height="140" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Image Grid.Column="1" 
+                       Source="\Images\bin.png" 
+                       Width="140" Height="140" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center"/>
                 
             </Grid>
             
         </Border>
 
         <!--Mid Section-->
-        <Border Grid.Row="1" Background="#EE6C4D" />
+        <Border Grid.Row="1" 
+                Background="#EE6C4D" />
 
         <!--Lower Section-->
         <Border Grid.Row="2">
