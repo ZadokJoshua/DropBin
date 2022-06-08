@@ -18,7 +18,6 @@ namespace DropBinWpf
         }
 
 
-
         private void Zip_Project_Button_Click(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrEmpty(PathTextBox.Text))
@@ -63,6 +62,15 @@ namespace DropBinWpf
             PathTextBox.Clear();
             Obj_Check_Box.IsChecked = false;
             Bin_Check_Box.IsChecked = false;
+        }
+
+        private void Browse_Button_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
+            if (dialog.ShowDialog(this).GetValueOrDefault())
+            {
+                PathTextBox.Text = dialog.SelectedPath;
+            }
         }
     }
 

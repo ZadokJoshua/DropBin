@@ -197,7 +197,8 @@
                             FontSize="10"
                             FontWeight="Bold"
                             Grid.Column="1"
-                            Background="#EE6C4D"/>
+                            Background="#EE6C4D"
+                            Click="Browse_Button_Click"/>
                         <TextBlock Text="Rename:" 
                                    Style="{StaticResource TextBlockStyle}" 
                                    Grid.Row="1" />
