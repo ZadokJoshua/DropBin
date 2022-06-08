@@ -1,6 +1,4 @@
-﻿using System;
-using System.Windows;
-using static DropBinWpf.Model.Deleter;
+﻿using System.Windows;
 
 namespace DropBinWpf.Model
 {
