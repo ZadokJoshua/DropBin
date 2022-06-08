@@ -11,17 +11,17 @@ namespace DropBinWpf.Model
                 if (Deleter.DeletingOperation(path) is true)
                 {
                     ZipClass.ZipFileOperation(path, FileName);
-                    MessageBox.Show("Project has been Dropbined");
+                    MessageBox.Show("Project has been Dropbined", "Superb!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
                 else
                 {
                     ZipClass.ZipFileOperation(path, FileName);
-                    MessageBox.Show("No Bin or Obj or Both found\nProject has been Dropbined");
+                    MessageBox.Show("No Bin or Obj or Both found\nProject has been Dropbined", "Superb!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("NotFoundException: Project not Found");
+                MessageBox.Show("NotFoundException: Project not Found", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
@@ -32,12 +32,12 @@ namespace DropBinWpf.Model
                 if (Deleter.DeletingOperation(path, folderEnum) is true)
                 {
                     ZipClass.ZipFileOperation(path, FileName);
-                    MessageBox.Show("Project has been Dropbined");
+                    MessageBox.Show("Project has been Dropbined", "Superb!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
                 else
                 {
                     ZipClass.ZipFileOperation(path, FileName);
-                    MessageBox.Show("No Bin or Obj or Both found\nProject has been Dropbined");
+                    MessageBox.Show("No Bin or Obj or Both found\nProject has been Dropbined", "Superb!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
             }
             else
@@ -53,17 +53,17 @@ namespace DropBinWpf.Model
                 if (Deleter.DeletingOperation(path) is true)
                 {
                     ZipClass.ZipFileOperation(path, newPath, FileName);
-                    MessageBox.Show("Project has been Dropbined");
+                    MessageBox.Show("Project has been Dropbined", "Superb!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
                 else
                 {
                     ZipClass.ZipFileOperation(path, newPath, FileName);
-                    MessageBox.Show("No Bin or Obj or Both found\nProject has been Dropbined");
+                    MessageBox.Show("No Bin or Obj or Both found\nProject has been Dropbined", "Superb!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("NotFoundException: Project not Found");
+                MessageBox.Show("NotFoundException: Project not Found", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }
