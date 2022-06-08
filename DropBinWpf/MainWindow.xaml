@@ -65,7 +65,6 @@
                     <Setter Property="Foreground" Value="Wheat"/>
                 </Trigger>
             </Style.Triggers>
-            
             <Style.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -119,17 +118,17 @@
 
         <!--Top Section-->
         <Border Padding="30">
-
             <Grid>
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
+
                 <StackPanel Grid.Column="0" 
                             VerticalAlignment="Center" 
                             Margin="20 0 0 0">
+                    
                     <TextBlock Text="DropBin"
                                FontSize="50"
                                FontFamily="Lato"
@@ -152,9 +151,8 @@
                        Width="140" Height="140" 
                        VerticalAlignment="Center" 
                        HorizontalAlignment="Center"/>
-                
+
             </Grid>
-            
         </Border>
 
         <!--Mid Section-->
@@ -170,7 +168,7 @@
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        
+
                         <!--CheckBoxes-->
                         <CheckBox Content="Exclude Bin Folder" 
                                   Style="{StaticResource CheckBoxStyle}" 
@@ -179,11 +177,12 @@
                                   Grid.Column="1" 
                                   Style="{StaticResource CheckBoxStyle}" 
                                   x:Name="Obj_Check_Box"/>
-                        
 
                     </Grid>
-                    
+
+                    <!--Path and Rename-->
                     <TextBlock Text="Path:" Style="{StaticResource TextBlockStyle}"/>
+
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -196,7 +195,7 @@
                         </Grid.RowDefinitions>
                         <TextBox Style="{StaticResource TextBoxStyle}"
                                 x:Name="PathTextBox"/>
-                        
+
                         <Button Width="50" Height="20" Foreground="#293241" 
                             HorizontalAlignment="Right" 
                             Margin="0 2" 
@@ -206,9 +205,11 @@
                             Grid.Column="1"
                             Background="#EE6C4D"
                             Click="Browse_Button_Click"/>
+
                         <TextBlock Text="Rename:" 
                                    Style="{StaticResource TextBlockStyle}" 
                                    Grid.Row="1" />
+
                         <TextBox Style="{StaticResource TextBoxStyle}" 
                             Grid.Row="2" 
                             Grid.ColumnSpan="2" 
@@ -228,7 +229,7 @@
                                 Content="Check History" 
                                 Style="{StaticResource form_buttons}"
                                 Margin="-160 0 0 0"/>
-                        
+
                         <!--Reset Button-->
                         <Button HorizontalAlignment="Right" 
                                 Grid.Column="1"  
@@ -242,15 +243,19 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Image Source="/images/circular.png" Width="15"  Height="15" Grid.Column="0"/>
-                                <TextBlock Text="Reset" Grid.Column="1" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                <Image Source="/images/circular.png" 
+                                       Width="15"  Height="15" 
+                                       Grid.Column="0"/>
+                                <TextBlock Text="Reset" 
+                                           Grid.Column="1" 
+                                           VerticalAlignment="Center" 
+                                           Margin="5 0 0 0"/>
                             </Grid>
                         </Button>
                     </Grid>
-                    
+
                 </StackPanel>
             </Grid>
         </Border>
-
     </Grid>
 </Window>
