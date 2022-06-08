@@ -36,7 +36,7 @@ namespace DropBinWpf
         {
             if (String.IsNullOrEmpty(PathTextBox.Text))
             {
-                MessageBox.Show("Please enter a File Path");
+                MessageBox.Show("Please enter a File Path", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {
