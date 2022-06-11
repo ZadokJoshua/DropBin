@@ -1,4 +1,5 @@
-﻿using DropBinWpf.Model;
+﻿using DropBinWpf.DataAccess;
+using DropBinWpf.Model;
 using System;
 using System.IO;
 using System.Windows;
@@ -48,6 +49,16 @@ namespace DropBinWpf
                     {
                         ActionClass.Operator(ProjectPath, ProjectName);
                     }
+
+                    var newFolder = new FolderInfo();
+                    newFolder.ProjectName = ProjectName;
+                    newFolder.NewProjectPath = ProjectPath;
+
+                    using (var db = new FolderInfoContext())
+                    {
+                        db.FolderInfo.Add(newFolder);
+                        db.SaveChanges();
+                    }
                 }
                 catch(Exception ex)
                 {
@@ -71,6 +82,12 @@ namespace DropBinWpf
             {
                 PathTextBox.Text = dialog.SelectedPath;
             }
+        }
+
+        private void CheckHistory_Click(object sender, RoutedEventArgs e)
+        {
+            CheckHistoryWindow checkHistoryWindow = new CheckHistoryWindow();
+            checkHistoryWindow.ShowDialog();
         }
     }
 
