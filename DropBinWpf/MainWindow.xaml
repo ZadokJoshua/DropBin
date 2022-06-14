@@ -217,9 +217,9 @@
                             x:Name="RenameTextBox"/>
                     </Grid>
 
-                    <Label/>
+                    <Label Content="📁 Default destination: Document directory" FontStyle="Italic" FontSize="10" Foreground="Wheat"/>
 
-                    <Grid Margin="15">
+                    <Grid Margin="10">
                         <Button Width="100" Height="30" 
                                 Content="Zip Project" 
                                 Style="{StaticResource form_buttons}"

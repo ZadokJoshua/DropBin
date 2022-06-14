@@ -5,22 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DropBinWpf"
         mc:Ignorable="d"
-        Title="Check History" Height="300" Width="450"
+        Title="Check History" Height="326" Width="541"
         WindowStartupLocation="CenterScreen"
         Background="#293241"
         ResizeMode="NoResize">
     <Grid>
         <StackPanel Margin="20">
-            <TextBlock Text="Default Path: Documents Folder" 
+            <TextBlock Text="Default Destination Path: Documents Folder" 
                        FontSize="12"
                        FontWeight="Light"
                        FontFamily="Lato"
                        Foreground="Wheat"/>
-            <DataGrid Height="201" 
-                      Margin="0 5"
-                      BorderBrush="Gray"
-                      BorderThickness="2"/>
-
+            <DockPanel>
+                <DataGrid Height="201" 
+                          Margin="0 5" 
+                          x:Name="myDataGrid" 
+                          ColumnWidth="*"
+                          AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                        <DataGridTextColumn Header="Project name" Binding="{Binding ProjectName}"/>
+                        <DataGridTextColumn Header="Original path" Binding="{Binding NewProjectPath}"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="Action"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.HeaderTemplate>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button x:Name="deleteBtn" Content="Delete" Click="deleteBtn_Click"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+            <Button x:Name="closeWindowBtn" IsCancel="True" Content="Close" Width="50"/>
         </StackPanel>
     </Grid>
 </Window>
