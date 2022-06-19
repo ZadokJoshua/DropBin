@@ -39,7 +39,15 @@ namespace DropBinWpf
         {
             try
             {
-                int Id = (myDataGrid.SelectedItem as FolderInfo).Id;
+                int Id = 0;
+                try
+                {
+                    Id = (myDataGrid.SelectedItem as FolderInfo).Id;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
                 using (var db = new FolderInfoContext())
                 {
                     var deleteMember = db.FolderInfo.Where(m => m.Id == Id).Single();
